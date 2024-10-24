@@ -1,0 +1,23 @@
+
+public class Acticity3 {
+
+	public static void main(String[] args) {
+		boolean result;
+		int Newnumber = 2;
+		result = isPrime(Newnumber);
+		System.out.print(result);
+
+	}
+
+	public static boolean isPrime(int n) {
+		for (int i = n; i < 10000; i++) {
+			for(int j=1;j<=i/2;j++)
+			if (i%j == 0) {
+				System.out.println(i+" isPrime");
+				return true;
+			}
+		}
+		return false;
+
+	}
+}

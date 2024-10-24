@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Activity5 {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		int i,n,c,b,a=1;
+		System.out.println("Enter the maximum value for i?");
+		n=input.nextInt();
+		for(i=n;i>0;i--) {
+			c=i;
+			while(i!=0) {
+			a=c*a;
+			c--;
+			}
+			b=1/a;
+			System.out.println(b);
+		}
+
+	}
+
+}

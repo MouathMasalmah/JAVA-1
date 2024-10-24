@@ -1,0 +1,13 @@
+
+public class Activity4 {
+
+	public static void main(String[] args) {
+		int i,P,n;
+		for(i=0;i<=n;i++) {
+			P=(4*Math.pow(-1,i+1))/(2*i-1);
+			System.out.println("π="+P);
+		}
+
+	}
+
+}

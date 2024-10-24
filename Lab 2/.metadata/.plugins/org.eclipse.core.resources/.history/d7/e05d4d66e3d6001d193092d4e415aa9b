@@ -1,0 +1,11 @@
+import java.util.*;
+public class actiivt1 {
+
+	public static void main(String[] args) {
+		Scanner imput=new Scannar(System.in);
+		System.out.println("Enter the number of the month");
+		int n=input Scanner(); 
+
+	}
+
+}

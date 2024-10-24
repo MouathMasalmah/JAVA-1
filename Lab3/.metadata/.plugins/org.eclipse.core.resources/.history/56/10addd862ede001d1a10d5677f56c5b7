@@ -1,0 +1,23 @@
+
+
+public class Activity6 {
+
+	public static void main(String[] args) {
+		int n,b=0;
+		for(int i = 2; i < 10000 ; i++) { 
+			System.out.println(i);
+			n = i;
+			b = 0;
+			while(n!=0) { 
+				n = n / 2;
+				b=b+n;
+			}
+			if(i==b)
+				System.out.println(i+" is perfect number");
+			else
+				System.out.println(i+" is not perfect number");
+			
+		}
+	}
+}
+		

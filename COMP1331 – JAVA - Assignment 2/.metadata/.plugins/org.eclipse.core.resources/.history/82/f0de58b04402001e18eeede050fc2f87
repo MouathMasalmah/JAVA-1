@@ -1,0 +1,43 @@
+
+public class Book {
+	private String Title , Author, Publisher, Language;
+	private double Edition ;
+
+	public Book() {
+
+	}
+
+	public Book(String title, String author, double edition, String publisher , String language) {
+		this.Title = title;
+		this.Author = author;
+		this.Publisher = publisher;
+		this.Language = language;
+		this.Edition = edition;
+	}
+
+	public String getTitle() {
+		return Title;
+	}
+
+	public String getAuthor() {
+		return Author;
+	}
+
+	public String getPublisher() {
+		return Publisher;
+	}
+
+	public String getLanguage() {
+		return Language;
+	}
+
+	public double getEdition() {
+		return Edition;
+	}
+
+	public String toString() {
+		return "Book [Title=" + Title + ", Author=" + Author + ", Publisher=" + Publisher + ", Language=" + Language
+				+ ", Edition=" + Edition + "]";
+	}
+
+}

@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Book[] book = new Book[30];
+		book[0] = new Book("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		book[1] = new Book("Computer science", "Mohammad hadi", 3, "Scientific institution for publishing", "English");
+		book[2] = new Book("يسألونك ", "Prof Hosam Aldeen Afana", 10, "دار الطيب للطباعة والنشر", "Arabic");
+		book[3] = new Book("مختصر صحيح مسلم", "Ahmad Shams Aldeen", 1, "دار الكتب العلمية - بيروت", "Arabic");
+		book[4] = new Book("الوجيز في تاريخ الإسلام والمسلمين", "Prof Ameer Abdalaziz", 2,"Addison-Wesley Professional", "English");
+		book[5] = new Book("Linux From Scratch", "Gerard Beckmans", 11.3, "Addison-Wesley Professional", "English");
+		book[6] = new Book("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		book[7] = new Book("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		book[8] = new Book("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		book[9] = new Book("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+
+	}
+
+}

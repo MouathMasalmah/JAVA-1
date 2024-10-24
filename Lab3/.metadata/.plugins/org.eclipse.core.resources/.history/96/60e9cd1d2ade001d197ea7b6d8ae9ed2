@@ -1,0 +1,17 @@
+
+
+public class Activity6 {
+
+	public static void main(String[] args) {
+		int i,n;
+		for(i=0;i<10000;i++) {
+			for(n=i;n>0;n--) {
+			if(i%n==0)
+				System.out.println(i+" is perfect number");
+			else
+				System.out.println(i+" is not perfect number");
+			}
+		}
+	}
+}
+		

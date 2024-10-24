@@ -1,0 +1,28 @@
+
+public class Acticity3 {
+
+	public static void main(String[] args) {
+		boolean result;
+		result = isPrime();
+		if(result==true) {
+			System.out.print(" is Prime");
+		}
+		else {
+			System.out.print(" is not Prime");
+		}
+
+	}
+
+	public static boolean isPrime() {
+		for (int i = 2 ; i < 10000 ; i++) {
+			System.out.print(i);
+			for(int j=1 ; j<=i/2 ; j++) {
+			if (i%j == 0) {
+				return true;
+			    }
+			}
+		}
+		return false;
+
+	}
+}

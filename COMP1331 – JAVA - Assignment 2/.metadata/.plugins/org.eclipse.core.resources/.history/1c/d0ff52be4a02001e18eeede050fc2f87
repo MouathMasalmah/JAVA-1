@@ -1,0 +1,55 @@
+
+public class Library {
+	Book B = new Book();
+	boolean[] borrow = new boolean[30];
+	Book[] book = new Book[30];
+	int Index = 0;
+
+	public Library() {
+	}
+
+	public void newBook(String title, String author, double edition, String publisher, String language) {
+		if (Index < book.length) {
+			book[Index] = new Book(title, author, edition, publisher, language);
+			Index++;
+		} else
+			System.out.println(" The library has reached the maximum number of books ");
+
+	}
+
+	public void borrowBook(String title) {
+		int i = 0;
+		while (book[i] != null) {
+			if (book[i].getTitle().contains(title) && borrow[i] == false) {
+				System.out.println("\\n The book: " + book[i].getTitle() + "\n<Borrowed successfully>\n");
+				borrow[i] = true;
+			}
+			else if (book[i].getTitle().contains(title) && borrow[i] == true) {
+				System.out.println("\n The book : " + book[i].getTitle() + " is already borrowed \n");
+			}
+			i++;
+		}
+	}
+
+	public void returnBook(String title) {
+		int I = 0;
+		while (book[I] != null) {
+			if (book[I].getTitle().contains(title) && borrow[I] == true) {
+				System.out.println("The Name of the Book: " + book[I].getTitle() + "\n<Replay completed successfully>");
+				borrow[I] = false;
+			}
+			I++;
+		}
+	}
+
+	public void printAvailableBooks() {
+
+		for (int j = 0; j < book.length; j++) {
+			if (borrow[j] == false)
+				System.out.println(B.getTitle());
+			else
+				continue;
+		}
+
+	}
+}

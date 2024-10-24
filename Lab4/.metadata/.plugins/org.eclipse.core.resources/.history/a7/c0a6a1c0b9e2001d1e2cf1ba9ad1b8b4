@@ -1,0 +1,23 @@
+import java.util.*;
+public class Acticity3 {
+
+	public static void main(String[] args) {
+			System.out.print("Please eneter an integer:");
+			Scanner scan = new Scanner(System.in);
+			int num = scan.nextInt(), count = 0;
+			for (int i = 2; i < num; i++)
+			if (isPrime(i))
+			count++;
+
+			System.out.println("The number of prime numbers less than " + num + " is" +
+			count);
+			}
+	public static boolean isPrime(int n) {
+		for (int i = 2; i <= n / 2; i++) {
+			if (n % i == 0)
+			return false;
+
+			}
+			return true;
+			}
+}

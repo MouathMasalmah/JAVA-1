@@ -1,0 +1,12 @@
+import java.util.*;
+public class actvity2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner imput=new Scanner(System.in);
+		System.out.println("Enter the number of the month");
+		int n;
+		n=imput.nextInt();
+	}
+
+}

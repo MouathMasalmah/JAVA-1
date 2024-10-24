@@ -1,0 +1,20 @@
+
+public class hhghh {
+	// Assume we have an array of books in our library let library = [ { title: "The
+	// Catcher in the Rye", author: "J.D. Salinger", borrowed: false }, { title: "To
+	// Kill a Mockingbird", author: "Harper Lee", borrowed: true }, { title: "1984",
+	// author: "George Orwell", borrowed: false }, // ... more books ]; // Define a
+	// borrowBook(title) {
+	for (let i = 0; i < library.length; i++) { 
+	if(library[i].title.toLowerCase().includes(title.toLowerCase()) && library[i].borrowed) 
+	{ library[i].borrowed = true; }
+	}  
+	} 
+	let result = borrowBook("the rye"); 
+	if (result) 
+	{console.log("Book borrowed successfully!");
+	} 
+	else 
+	{ console.log("Book not found or already borrowed.");
+	}
+}

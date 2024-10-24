@@ -1,0 +1,157 @@
+//Mouath_Sami_Masalmah,1220179,Section:6,Saadeddin_Hroub.
+
+import java.util.*;
+
+public class SpecialPrimes {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("1-Print primes between a and b");
+		System.out.println("2-Print special primes between a and b");
+		System.out.println("3-Print special primes (reverse numbers) between a and b using recursion");
+		System.out.println("4-Exit");
+		System.out.print("Enter your choice:");
+		int the_num = input.nextInt();
+		int i;
+
+		while (the_num != 4) {
+			System.out.print("Enter a:");
+			int num1 = input.nextInt();
+			System.out.print("Enter b:");
+			int num2 = input.nextInt();
+
+			switch (the_num) {
+			case 1:
+
+				if (num1 > num2) {
+					for (i = num2; i <= num1; i++) {
+
+						if (isPrime(i) == true) {
+							if (i == 0)
+								continue;
+							System.out.println(i);
+
+						}
+					}
+				}
+
+				else if (num2 > num1) {
+					for (i = num1; i <= num2; i++) {
+
+						if (isPrime(i) == true) {
+							if (i == 0)
+								continue;
+							System.out.println(i);
+
+						}
+					}
+
+				}
+				break;
+			case 2:
+
+				if (num1 > num2) {
+					for (i = num2; i <= num1; i++) {
+						if (isPrime(i) == true && containsTwo(i) == true) {
+							if (i == 0)
+								continue;
+							System.out.println(i);
+						}
+					}
+				}
+
+				else if (num2 > num1) {
+					for (i = num1; i <= num2; i++) {
+						if (isPrime(i) == true && containsTwo(i) == true) {
+							if (i == 0)
+								continue;
+							System.out.println(i);
+						}
+
+					}
+				}
+				break;
+
+			case 3:
+
+				if (num1 > num2) {
+					for (i = num2; i <= num1; i++) {
+						if (isPrime(i) == true && containsTwo(i) == true) {
+							if (i == 0)
+								continue;
+							printReverse(i);
+
+						}
+					}
+				} else if (num2 > num1) {
+					for (i = num1; i <= num2; i++) {
+						if (isPrime(i) == true && containsTwo(i) == true) {
+							if (i == 0)
+								continue;
+							printReverse(i);
+
+						}
+					}
+				}
+
+				break;
+
+			default:
+				System.out.println("\n\n...Erorr......try again.....\n\n");
+			}
+			System.out.println("1-Print primes between a and b");
+			System.out.println("2-Print special primes between a and b");
+			System.out.println("3-Print special primes (reverse numbers) between a and b using recursion");
+			System.out.println("4-Exit");
+			System.out.print("Enter your choice:");
+			the_num = input.nextInt();
+		}
+		if (the_num == 4) {
+			System.out.println("Good Bye…");
+		}
+
+	}
+
+	public static boolean isPrime(int i) {
+		int count = 0;
+		for (int j = 1; j <= i / 2 && i>0; j++) {
+			if (i % j == 0) {
+				count++;
+			}
+		}
+		if (count > 1) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static boolean containsTwo(int i) {
+		int count = 0;
+		while (i > 1) {
+
+			int b = i % 10;
+			if (b == 2) {
+				count++;
+			}
+			i = i / 10;
+		}
+		if (count >= 1)
+			return true;
+
+		return false;
+	}
+
+	public static void printReverse(int i) {
+		if (i <= 0) {
+			System.out.println("");
+		} else {
+			int b = i % 10;
+			System.out.print(b);
+			printReverse(i / 10);
+		}
+
+	}
+
+}

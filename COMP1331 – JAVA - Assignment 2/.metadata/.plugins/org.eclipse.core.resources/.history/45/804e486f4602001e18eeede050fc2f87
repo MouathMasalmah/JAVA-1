@@ -1,0 +1,50 @@
+import java.lang.NullPointerException;
+
+public class Library {
+	Book B = new Book();
+	boolean[] borrow = new boolean[30];
+	Book[] book = new Book[30];
+	int Index = 0;
+
+	public Library() {
+	}
+
+	public void newBook(String title, String author, double edition, String publisher, String language) {
+		if (Index < book.length) {
+			book[Index] = new Book(title, author, edition, publisher, language);
+			Index++;
+		} else
+			System.out.println(" The library has reached the maximum number of books ");
+
+	}
+
+	public void borrowBook(String title) {
+		int i = 0;
+		while(book[i] != null) {
+			if (book[i].getTitle().contains(title) && borrow[Index] == false) {
+				System.out.println(" 111111111111111111111111111111111111111");
+				borrow[Index] = true;
+			}
+			i++;
+		}
+	}
+
+	public void returnBook(String title) {
+		for (Index = 0; Index < book.length; Index++)
+			if (book[Index].getTitle().contains(title) && borrow[Index] == true) {
+				System.out.println(" 111111111111111111111111111111111111111");
+				borrow[Index] = false;
+			}
+
+	}
+
+	public void printAvailableBooks() {
+		for (int i = 0; i < book.length; i++) {
+			if (borrow[i] == false)
+				System.out.println(B.getTitle());
+			else
+				continue;
+		}
+
+	}
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Activity5 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter a decimal number between 0 and 255:");
+		int Number = scan.nextInt();
+		if (0 > Number && 255 < Number) {
+			System.out.println("enter the correct value:");
+			Number = scan.nextInt();
+		}
+		System.out.println(Number + " in binary = ");
+		binaryValue(Number);
+
+	}
+
+	public static void binaryValue(int i) {
+
+		for (; i > 0; i /= 2) {
+			if (i % 2 != 0)
+				System.out.print("1");
+			else
+				System.out.print("0");
+
+		}
+	}
+}

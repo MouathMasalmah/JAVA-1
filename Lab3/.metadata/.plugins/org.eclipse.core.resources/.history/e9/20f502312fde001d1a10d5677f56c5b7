@@ -1,0 +1,20 @@
+
+
+public class Activity6 {
+
+	public static void main(String[] args) {
+		int counter = 0 , b = 0;
+		for(int i = 2 ; i < 10000 ; i++) {
+			counter = i;
+			while ( counter != 0) {
+				counter = counter / 2;
+				b = b + counter;
+			}
+			if ( b == i) {
+				System.out.println(i);
+			}
+		}
+		
+	}
+}
+		

@@ -1,0 +1,89 @@
+package project1;
+
+public class Bank {
+	
+	
+	Account[] A1 = new Account[1000];
+	int Index1 = 0;
+
+	public Bank() {
+
+	}
+
+	public void newAccount(int id, String name, long phone, double balance, char choice) {
+
+		if (Index1 < A1.length) {
+			A1[Index1] = new Account(id, name, phone, balance, choice);
+			Index1++;
+		} 
+	}
+
+	
+	void displayMainMenu() {
+		System.out
+		 .println("1- Add Account \n" + "2- View All Accounts \n" + "3- Add Amount \n" + "4- Withdraw Amount \n"
+					+ "5- View Account Details \n" + "6- Modify Account \n" + "7- Close an Account \n" + "8- Exit");
+		System.out.println("Choose one of the following options:");
+
+	}
+	
+	
+	
+	
+	
+	
+	void addAmount(  int id , String name ,Double add  ) {
+		
+		 for (int i = 0 ; i < A1.length  ; i++) {
+			 while (A1[i] != null) {
+			 if (id == A1[i].getID() && name == A1[i].getName()) {
+		 A1[i].setBalance(add + A1[i].getBalance());
+		 System.out.println(" the success deposite money the total money in your account "+A1[Index1].getBalance());
+				 
+			 }
+			 }
+			  
+				 System.out.println("does't exit account ");
+				 break;
+			 
+			  
+			 
+			 
+		 }
+	 		 
+		 
+		
+	}
+	void displayAccounts(String name,int id) {
+		int I = 0;
+		while (A1[I] != null) {
+			if (A1[I].getName() == name && A1[I].getID() == id) {
+				System.out.println("\nThe book: " + A1[I].toString());
+			} 
+			I++;
+		}
+		}
+	
+	void  withdrawAmount (int id2 , String name2 ,Double balance2) {
+		 for (int i = 0 ; i < A1.length ; i++) {
+			 if (id2 == A1[i].getID() && name2 == A1[i].getName()) {
+		 A1[i].setBalance( A1[i].getBalance()  - balance2  );
+		 System.out.println(" the success  withdraw  mony the total money in your account "+A1[Index1].getBalance());
+				 
+			 }
+			 else {
+				 System.out.println("no exist account ");
+				 break;
+			 }
+			  
+			 
+			 
+		 }
+	}
+}
+	
+	 
+		
+	
+
+

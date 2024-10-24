@@ -1,0 +1,141 @@
+
+package project1;
+
+import java.util.Scanner;
+import java.io.*;
+
+public class Bank {
+
+	java.io.File file = new java.io.File("Account.txt");
+	Scanner scan = new Scanner(System.in);
+	Account account = new Account();
+	Account[] A1 = new Account[10000];
+
+	public Bank() {
+
+	}
+
+	void displayAccounts() {
+		System.out.println("true displayAccounts\n");
+	}
+
+	void addAccount() {
+		System.out.println("\nEnter your name please:");
+		String Name = scan.next();
+		System.out.println("\nEnter your ID:");
+		int Id = scan.nextInt();
+		int i = Id, count = 0;
+		while (i != 0) {
+			i /= 10;
+			count++;
+		}
+
+		System.out.println(" please: ");
+
+	}
+
+	void closeAccount() {
+		System.out.println("true closeAccount\n");
+
+	}
+
+	void viewAccountDetails() {
+		System.out.println("true viewAccountDetails\n");
+	}
+
+	void modifyAccountDetails() {
+		System.out.println("true modifyAccountDetails\n");
+	}
+
+	void addAmount(Double add) {
+
+		int i = 0; /* the index for the array for test the array equal null or not */
+		while (A1[i] != null) { /*
+								 * when the array don't null values get parameter value (the money want deposit
+								 * ) add for total balance and save sum total balance
+								 */
+
+			A1[i].setBalance(add + A1[i].getBalance());
+			System.out.println(" the success deposite money the total money in your account: " + A1[i].getBalance());
+
+			i++;
+		}
+
+	}
+
+	void withdrawAmount(Double Deduction) {
+		int i = 0; /* the index for the array for test the array equal null or not */
+
+		while (A1[i] != null) {
+			/*
+			 * when the array don't null values get parameter value (the money want withdraw
+			 * ) discount for total balance and save sum total balance
+			 */
+
+			System.out.println("The balance= " + A1[i].getBalance());
+			if (Deduction > A1[i].getBalance() || A1[i].getBalance() == 0) {
+				/*
+				 * Using the if condition to check the amount he wants to withdraw if it is
+				 * greater than the total balance and if the total balance is zero
+				 */
+
+				if (Deduction > A1[i].getBalance())
+					/*
+					 * Use the if condition to check the amount you want to withdraw if it is
+					 * greater than the total balance prints try again
+					 */
+					System.out.println("The number you entered is greater than your balance, try again!");
+				else if (A1[i].getBalance() == 0)
+
+					/*
+					 * Use an if condition to check if the total balance is zero print The account
+					 * has no balance
+					 */
+
+					System.out.println("The account has no balance!!");
+			}
+
+			else if (A1[i].getBalance() >= Deduction) {
+				/*
+				 * get parameter value (the money want withdraw ) discount for total balance and
+				 * save sum total balance if total balance greater than or equal the money want
+				 * withdraw
+				 */
+
+				A1[i].setBalance(A1[i].getBalance() - Deduction);
+				System.out.println("The success  withdraw  mony the total money in your account " + A1[i].getBalance());
+
+			}
+
+			i++;
+
+		}
+
+	}
+
+	void uploadDataFile() throws IOException {
+		Scanner inputFile = new Scanner(file);
+		while (inputFile.hasNext()) {
+			String name = inputFile.nextLine();
+			System.out.println(name);
+			inputFile.close();
+
+		}
+	}
+
+	void updateDataFile() throws IOException {
+
+		Scanner input = new Scanner(file);
+
+		// Read data from a file
+		while (input.hasNext()) {
+			String firstName = input.next();
+			String mi = input.next();
+			String lastName = input.next();
+			int score = input.nextInt();
+			System.out.println(firstName + " " + mi + " " + lastName + " " + score);
+		}
+		// Close the file
+		input.close();
+	}
+}

@@ -1,0 +1,24 @@
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Library library = new Library();
+		library.newBook("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		library.newBook("Computer science", "Mohammad hadi", 3, "Scientific institution for publishing", "English");
+		library.newBook("يسألونك ", "Prof Hosam Aldeen Afana", 10, "دار الطيب للطباعة والنشر", "Arabic");
+		library.newBook("مختصر صحيح مسلم", "Ahmad Shams Aldeen", 1, "دار الكتب العلمية - بيروت", "Arabic");
+		library.newBook("الوجيز في تاريخ الإسلام والمسلمين", "Prof Ameer Abdalaziz", 2, "Addison-Wesley Professional","English");
+		library.newBook("Linux From Scratch", "Gerard Beckmans", 11.3, "Addison-Wesley Professional", "English");
+		library.newBook("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		library.newBook("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		library.newBook("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		library.newBook("Computer security", "Matt Bishop", 2, "Addison-Wesley Professional", "English");
+		
+		library.borrowBook("الوجيز في تاريخ الإسلام والمسلمين");
+		library.borrowBook("Linux From Scratch");
+		library.borrowBook("الوجيز في تاريخ الإسلام والمسلمين");
+		library.returnBook("Linux From Scratch");
+		library.printAvailableBooks();
+	}
+
+}

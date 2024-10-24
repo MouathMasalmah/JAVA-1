@@ -1,0 +1,38 @@
+package Project_1;
+import java.util.*;
+public class Driver {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("1- Add Account \r\n"
+				+ "2- View All Accounts \r\n"
+				+ "3- Add Amount \r\n"
+				+ "4- Withdraw Amount \r\n"
+				+ "5- View Account Details \r\n"
+				+ "6- Modify Account \r\n"
+				+ "7- Close an Account \r\n"
+				+ "1\r\n"
+				+ "8- Exit");
+		int options=scan.nextInt();
+		switch (options) {
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		}
+
+	}
+
+}
